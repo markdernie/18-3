@@ -1,0 +1,72 @@
+
+
+<h4>1. Uppercase First Pipe</h4><p>{{ 'hello world' | uppercaseFirst }}</p>
+<h4>2. Reverse String Pipe</h4><p>{{ 'Angular' | reverseString }}</p>
+<h4>3. Filter Array Pipe</h4>
+<ul>
+    <li *ngFor="let item of items | filterArray:'category':'Electronics'">{{ item.name }}</li>
+</ul>
+
+<h4>4. Truncate Text Pipe</h4><p>{{ 'This is a long text that should be truncated' | truncateText:20 }}</p>
+<h4>5. Sort Array Pipe</h4>
+<ul>
+  <li *ngFor="let item of items | sortArray:'price':'asc'">{{ item.name }} - {{ item.price }}</li>
+</ul>
+
+<h4>6. Currency Converter Pipe</h4><p>{{ 100 | currencyConverter:1.2 }}</p>
+
+<h4>7. Phone Number Formatter Pipe</h4><p>{{ '1234567890' | phoneNumberFormatter }}</p>
+
+<h4>8. File Size Pipe</h4><p>{{ 1024 | fileSize }}</p>
+
+<h4>9. Markdown To HTML Pipe</h4><div [innerHtml]="markdownText | markdownToHtml"></div>
+
+<h4>10. Time Ago Pipe</h4><p>{{ someTimestamp | timeAgo }}</p>
+
+<h4>11. Percent Change Pipe</h4><p>{{ 85 | percentChange:100 }}</p>
+
+<h4>12. Initials Pipe</h4><p>{{ 'John Doe' | initials }}</p>
+
+<h4>13. Strip HTML Tags Pipe</h4><p>{{ htmlstr | stripHtmlTags }}</p>
+
+<h4>14. Camel Case To Spaces Pipe</h4><p>{{ 'camelCaseExample' | camelCaseToSpaces }}</p>
+  
+<h4>15. Title Case Pipe</h4><p>{{ 'this is a title case example' | titleCase }}</p>
+
+<!-- <h4>16. Masked Input Pipe</h4><input [ngModel]="'1234567890'" [ngModelOptions]="{standalone:true,updateOn: 'blur'}" [value]="'(***) ***-****' | maskedInput"> -->
+
+<h4>17. Pluralize</h4><p>{{ 'item' | pluralize:1 }}</p><p>{{ 'item' | pluralize:5 }}</p>
+
+<h4>18. Humanize Duration</h4><p>{{ 7200 | humanizeDuration }}</p>
+
+<h4>19. JSON Pretty Print Pipe</h4><pre>{{ someJsonObject | jsonPrettyPrint }}</pre>
+
+<h4>20. Password Strength Pipe</h4><p>{{ 'Pass123' | passwordStrength }}</p><p>{{ 'StrongPassword123' | passwordStrength }}</p>
+
+<h4>21. Ordinal Number Pipe</h4><p>{{ 1 | ordinalNumber }}</p><p>{{ 22 | ordinalNumber }}</p><p>{{ 13 | ordinalNumber }}</p><p>{{ 7 | ordinalNumber }}</p>
+
+<h4>22. URLify Pipe</h4><p>{{ 'This is a URL-friendly title!' | urlify }}</p>
+
+<h4>23. Relative Time Pipe</h4><p>{{ someTimestamp | relativeTime }}</p>
+
+<h4>24. Array Shuffle</h4><ul>
+  <li *ngFor="let item of item1 | arrayShuffle">{{ item }}</li>
+</ul>
+
+<h4>25. Color Contrast Pipe</h4><div [style.background-color]="'#3498db'" [style.color]="'#3498db' | colorContrast">
+  Text with contrast
+</div>
+
+<h4>26. Roman Numeral Pipe</h4><p>{{ 1984 | romanNumeral }}</p>
+
+<h4>27. Sentence Case Pipe</h4><p>{{ 'this is a sentence. this is another. the third.' | sentenceCase }}</p>
+
+<h4>28. CSV To Array Pipe</h4><ul>
+  <li *ngFor="let item of 'apple,banana,cherry' | csvToArray">{{ item }}</li>
+</ul>
+
+<h4>29. Slugify Pipe</h4><p>{{ 'This is a Slug Example!' | slugify }}</p>
+
+<!-- <h4>30. Random Placeholder Image Pipe</h4><img [src]="'200x150' | randomPlaceholderImage" alt="Random Placeholder Image"> -->
+
+<h4>31. Phone Number Mask Pipe</h4><p>{{ '1234567890' | phoneNumberMask }}</p>

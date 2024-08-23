@@ -1,0 +1,25 @@
+
+<mat-card>
+    <form [formGroup]="reportform">
+    <!-- <input [value]=item.id> -->
+    <mat-form-field>
+        <mat-label>id</mat-label>
+        <input matInput formControlName="id">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>creationdate</mat-label>
+        <input matInput formControlName="creationdate">
+    </mat-form-field>
+    <!-- <mat-form-field>
+        <mat-label>Note</mat-label>
+        <input matInput formControlName="s01">
+    </mat-form-field> -->
+</form>
+<!-- {{item.id}} -->
+<mat-card-actions class="action">
+    <button mat-raised-button color='primary' (click)="save(reportform)">Save</button>
+    <button mat-raised-button (click)="get(reportform.value.id)">Get</button>
+    <!-- <button mat-raised-button color='primary' (click)="getindex()">Get Index</button> -->
+    
+</mat-card-actions>
+</mat-card>
